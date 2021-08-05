@@ -44,6 +44,7 @@ public class EmpStoreController {
 	@RequestMapping(value="/delete/{id}",method=RequestMethod.DELETE)
 	public ResponseEntity<String> deleteEmp(@PathVariable int id) throws DatabaseException{
 		String msg=service.deleteEmp(id);
+		System.out.println("DeleteEmp()");
 		return new ResponseEntity<String>(msg,HttpStatus.ACCEPTED);
 	}
 	
