@@ -30,7 +30,7 @@ public class EmpReadController {
 	response = Employee.class)
 	public ResponseEntity<Employee> getEmp(@PathVariable int id) throws DatabaseException {
 		Employee obj=service.getEmpById(id);
-		System.out.println("Find Employee");
+		System.out.println("Find Employees");
 		return new ResponseEntity<Employee>(obj,HttpStatus.OK);
 	}
 	
